@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A394B5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textSize="20sp"
+        android:text="ПРИЛОЖЕНИЕ ПЛЕЕР"
+        android:textColor="#341A51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/metaDataAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:hint="Название трека"
+        android:textColor="#341A51"
+        android:textColorHint="#AA67F6"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:fontFamily="serif"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="380dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="21dp"
+        android:progressBackgroundTint="#AA67F6"
+        android:progressTint="#341A51"
+        android:thumbTint="#65359C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metaDataAudio" />
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timeDuration">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabRepeat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:fabCustomSize="50dp"
+            app:backgroundTint="#AA67F6"
+            android:backgroundTint="#AA67F6"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/repeat_off" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:fabCustomSize="50dp"
+            android:layout_marginEnd="10dp"
+            app:backgroundTint="#8C4CD5"
+            android:backgroundTint="#8C4CD5"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_media_rew" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabPlayPause"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#65359C"
+            android:clickable="true"
+            app:backgroundTint="#65359C"
+            app:fabCustomSize="80dp"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabForward"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:fabCustomSize="50dp"
+            android:layout_marginStart="10dp"
+            app:backgroundTint="#8C4CD5"
+            android:backgroundTint="#8C4CD5"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabNext"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:fabCustomSize="50dp"
+            app:backgroundTint="#AA67F6"
+            android:backgroundTint="#AA67F6"
+            android:layout_marginStart="30dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_media_next" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timeDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
